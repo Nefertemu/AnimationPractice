@@ -62,11 +62,11 @@
 			children = (
 				435D6FB728D088DC0092397E /* AppDelegate.swift */,
 				435D6FB928D088DC0092397E /* SceneDelegate.swift */,
-				435D6FBB28D088DC0092397E /* ViewController.swift */,
 				435D6FD028D09F5D0092397E /* Animation.swift */,
+				435D6FBB28D088DC0092397E /* ViewController.swift */,
 				435D6FBD28D088DC0092397E /* Main.storyboard */,
-				435D6FC028D088DE0092397E /* Assets.xcassets */,
 				435D6FC228D088DE0092397E /* LaunchScreen.storyboard */,
+				435D6FC028D088DE0092397E /* Assets.xcassets */,
 				435D6FC528D088DE0092397E /* Info.plist */,
 			);
 			path = AnimationPractice;
