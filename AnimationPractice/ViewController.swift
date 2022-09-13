@@ -10,9 +10,7 @@ import SpringAnimation
 
 final class ViewController: UIViewController {
     
-    private let animations = Animation.getAnimations()
-    
-    private var currentAnimation = 0
+    // MARK: - IBOutlets
     
     @IBOutlet var springAnimationView: SpringView!
 
@@ -24,6 +22,14 @@ final class ViewController: UIViewController {
     
     @IBOutlet var runButton: SpringButton!
     
+    // MARK: - Private properties
+    
+    private let animations = Animation.getAnimations()
+    
+    private var currentAnimation = 0
+    
+    // MARK: - LifeCycle methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,14 +40,17 @@ final class ViewController: UIViewController {
         setupAnimationView()
         
         runAnimation()
-        
     }
+    
+    // MARK: - IBActions
 
     @IBAction func runButtonPressed(_ sender: SpringButton) {
         runAnimation()
         
         setupAnimationView()
     }
+    
+    // MARK: - Private methods
     
     private func setupAnimationView() {
         if currentAnimation <= animations.count {
