@@ -10,9 +10,9 @@ import SpringAnimation
 
 final class ViewController: UIViewController {
     
-    let animations = Animation.getAnimations()
+    private let animations = Animation.getAnimations()
     
-    var currentAnimation = 0
+    private var currentAnimation = 0
     
     @IBOutlet var springAnimationView: SpringView!
 
@@ -27,27 +27,20 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        runButton.backgroundColor = .darkGray
-        
         springAnimationView.layer.cornerRadius = 30
         runButton.layer.cornerRadius = 15
         
+        runAnimation()
         setupAnimationView()
     }
 
     @IBAction func runButtonPressed(_ sender: SpringButton) {
-        springAnimationView.animation = animations[currentAnimation].preset.rawValue
-        springAnimationView.curve = animations[currentAnimation].curve.rawValue
-        springAnimationView.force = animations[currentAnimation].force
-        springAnimationView.duration = animations[currentAnimation].duration
-        springAnimationView.delay = animations[currentAnimation].delay
-        springAnimationView.animate()
+        runAnimation()
         
         setupAnimationView()
     }
     
     private func setupAnimationView() {
-        
         if currentAnimation <= animations.count {
             presetLabel.text = "preset: " + animations[currentAnimation].preset.rawValue
             curveLabel.text = "curve: \(animations[currentAnimation].curve.rawValue)"
@@ -55,10 +48,19 @@ final class ViewController: UIViewController {
             durationLabel.text = "duration: " + String(format: "%.1f", animations[currentAnimation].duration)
             delaylabel.text = "delay: " + String(format: "%.1f", animations[currentAnimation].delay)
             
-            runButton.titleLabel?.text = "Run " + animations[currentAnimation + 1].preset.rawValue
+            runButton.setTitle("Run " + animations[currentAnimation + 1].preset.rawValue, for: .normal)
             
             currentAnimation += 1
         }
+    }
+    
+    private func runAnimation() {
+        springAnimationView.animation = animations[currentAnimation].preset.rawValue
+        springAnimationView.curve = animations[currentAnimation].curve.rawValue
+        springAnimationView.force = animations[currentAnimation].force
+        springAnimationView.duration = animations[currentAnimation].duration
+        springAnimationView.delay = animations[currentAnimation].delay
+        springAnimationView.animate()
     }
     
 }

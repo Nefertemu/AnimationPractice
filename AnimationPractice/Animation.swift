@@ -31,7 +31,7 @@ extension Animation {
                 curve: shuffledCurves[iteration],
                 force: CGFloat.random(in: 1...2),
                 duration: CGFloat.random(in: 0.5...2),
-                delay: CGFloat.random(in: 0.3...1))
+                delay: CGFloat.random(in: 0.3...0.7))
             animations.append(animation)
         }
         
