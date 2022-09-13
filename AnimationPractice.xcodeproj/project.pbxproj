@@ -14,6 +14,7 @@
 		435D6FC128D088DE0092397E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 435D6FC028D088DE0092397E /* Assets.xcassets */; };
 		435D6FC428D088DE0092397E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 435D6FC228D088DE0092397E /* LaunchScreen.storyboard */; };
 		435D6FCF28D092960092397E /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 435D6FCE28D092960092397E /* SpringAnimation */; };
+		435D6FD128D09F5D0092397E /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435D6FD028D09F5D0092397E /* Animation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		435D6FC028D088DE0092397E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		435D6FC328D088DE0092397E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		435D6FC528D088DE0092397E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		435D6FD028D09F5D0092397E /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				435D6FB728D088DC0092397E /* AppDelegate.swift */,
 				435D6FB928D088DC0092397E /* SceneDelegate.swift */,
 				435D6FBB28D088DC0092397E /* ViewController.swift */,
+				435D6FD028D09F5D0092397E /* Animation.swift */,
 				435D6FBD28D088DC0092397E /* Main.storyboard */,
 				435D6FC028D088DE0092397E /* Assets.xcassets */,
 				435D6FC228D088DE0092397E /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 			files = (
 				435D6FBC28D088DC0092397E /* ViewController.swift in Sources */,
 				435D6FB828D088DC0092397E /* AppDelegate.swift in Sources */,
+				435D6FD128D09F5D0092397E /* Animation.swift in Sources */,
 				435D6FBA28D088DC0092397E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

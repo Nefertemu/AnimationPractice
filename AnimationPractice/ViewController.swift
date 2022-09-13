@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import SpringAnimation
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
-    @IBOutlet var springAnimationView: UIView!
+    let animations = Animation.getAnimations()
+    
+    @IBOutlet var springAnimationView: SpringView!
 
     @IBOutlet var presetLabel: UILabel!
     @IBOutlet var curveLabel: UILabel!
@@ -17,15 +20,17 @@ class ViewController: UIViewController {
     @IBOutlet var durationLabel: UILabel!
     @IBOutlet var delaylabel: UILabel!
     
-    @IBOutlet var runButton: UIButton!
+    @IBOutlet var runButton: SpringButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
-    @IBAction func runButtonPressed() {
+    @IBAction func runButtonPressed(_ sender: SpringButton) {
+        springAnimationView.animation
+        springAnimationView.animate()
     }
     
 }
