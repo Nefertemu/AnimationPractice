@@ -19,15 +19,12 @@ extension Animation {
     static func getAnimations() -> [Animation] {
         var animations = [Animation]()
         
-        let shuffledAnimations = DataStore.shared.animationPresets.shuffled()
-        let shuffledCurves = DataStore.shared.animationPresets.shuffled()
+        let numberOfIterations = min(DataStore.shared.animationPresets.count, DataStore.shared.animationCurves.count)
         
-        let numberOfIterations = min(shuffledAnimations.count, shuffledCurves.count)
-        
-        for iteration in 0..<numberOfIterations {
+        for _ in 0..<numberOfIterations {
             let animation = Animation(
-                preset: shuffledAnimations[iteration],
-                curve: shuffledCurves[iteration],
+                preset: DataStore.shared.animationPresets.randomElement()?.rawValue ?? "slideLeft",
+                curve: DataStore.shared.animationCurves.randomElement()?.rawValue ?? "easeIn",
                 force: CGFloat.random(in: 1...2),
                 duration: CGFloat.random(in: 0.7...1.5),
                 delay: CGFloat.random(in: 0.3...0.7))

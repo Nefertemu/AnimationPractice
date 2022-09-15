@@ -13,9 +13,7 @@ final class AnimationsViewController: UIViewController {
     // MARK: - IBOutlets
     
     @IBOutlet var springAnimationView: SpringView!
-    
     @IBOutlet var labels: [UILabel]!
-    
     @IBOutlet var runButton: SpringButton!
     
     // MARK: - Private properties
