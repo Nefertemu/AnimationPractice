@@ -6,11 +6,10 @@
 //
 
 import Foundation
-import SpringAnimation
 
 struct Animation {
-    let preset: AnimationPreset
-    let curve: AnimationCurve
+    let preset: String
+    let curve: String
     let force: CGFloat
     let duration: CGFloat
     let delay: CGFloat
@@ -20,8 +19,8 @@ extension Animation {
     static func getAnimations() -> [Animation] {
         var animations = [Animation]()
         
-        let shuffledAnimations = AnimationPreset.allCases.shuffled()
-        let shuffledCurves = AnimationCurve.allCases.shuffled()
+        let shuffledAnimations = DataStore.shared.animationPresets.shuffled()
+        let shuffledCurves = DataStore.shared.animationPresets.shuffled()
         
         let numberOfIterations = min(shuffledAnimations.count, shuffledCurves.count)
         
